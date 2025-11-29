@@ -1,0 +1,32 @@
+:root{
+--bg: #f6f7fb;
+--card: #ffffff;
+--accent: #3366ff;
+--muted: #666;
+}
+*{box-sizing:border-box}
+body{font-family:Inter, system-ui, Arial, sans-serif;background:var(--bg);margin:0;color:#111}
+.container{max-width:1000px;margin:32px auto;padding:16px}
+.center-col{display:flex;flex-direction:column;align-items:center;gap:16px;text-align:center}
+.topbar{background:linear-gradient(90deg,#fff,#f8fbff);box-shadow:0 2px 6px rgba(10,10,20,0.05)}
+.topbar .container{display:flex;justify-content:space-between;align-items:center}
+.btn{display:inline-block;padding:10px 16px;background:var(--accent);color:#fff;border-radius:8px;text-decoration:none;border:none;cursor:pointer}
+.btn.small{padding:6px 10px;font-size:0.9rem}
+.link{color:var(--accent);text-decoration:none}
+.lead{color:var(--muted)}
+.admin-grid{display:grid;grid-template-columns:360px 1fr;gap:20px;align-items:start}
+.card{background:var(--card);padding:16px;border-radius:12px;box-shadow:0 6px 18px rgba(36,42,60,0.08)}
+.form-card label{display:block;margin-bottom:10px;font-size:0.95rem}
+.form-card input,.form-card select{width:100%;padding:10px;border-radius:8px;border:1px solid #e6e9f2;margin-top:6px}
+.form-actions{margin-top:8px}
+.controls{margin-top:12px}
+.control-row{display:flex;gap:8px;align-items:center;margin-top:8px}
+.display-card .grid{display:grid;grid-template-columns:repeat(auto-fill, minmax(180px, 1fr));gap:16px;margin-top:12px}
+.book-card{background:linear-gradient(180deg,#fff,#fbfdff);border-radius:10px;padding:10px;box-shadow:0 8px 22px rgba(34,40,60,0.08);display:flex;flex-direction:column;gap:8px}
+.book-card img{width:100%;height:170px;object-fit:cover;border-radius:6px}
+.book-meta{font-size:0.9rem}
+.book-meta h4{margin:0;font-size:1rem}
+.book-meta p{margin:2px 0;color:var(--muted);font-size:0.85rem}
+.card .muted{color:var(--muted);text-align:center}
+.delete-btn{background:#ff4757;border:none;color:#fff;padding:8px;border-radius:8px;cursor:pointer}
+@media (max-width:880px){.admin-grid{grid-template-columns:1fr;}}

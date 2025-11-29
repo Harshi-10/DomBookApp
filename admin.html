@@ -1,0 +1,72 @@
+<!doctype html>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="topbar">
+<div class="container">
+<h2>Book Management</h2>
+<nav>
+<a class="link" href="index.html">Home</a>
+</nav>
+</div>
+</header>
+
+
+<main class="container admin-grid">
+<section class="card form-card">
+<h3>Add Book</h3>
+<form id="bookForm">
+<label>
+Title
+<input id="title" required type="text" placeholder="Book title">
+</label>
+<label>
+Author
+<input id="author" required type="text" placeholder="Author name">
+</label>
+<label>
+Category
+<select id="category">
+<option value="Fiction">Fiction</option>
+<option value="Comedy">Comedy</option>
+<option value="Technical">Technical</option>
+</select>
+</label>
+<div class="form-actions">
+<button id="addBookBtn" class="btn" type="submit">Add Book</button>
+</div>
+</form>
+
+
+<div class="controls">
+<div class="control-row">
+<label>Sort:</label>
+<button id="sortAZ" class="btn small">Title A → Z</button>
+<button id="sortZA" class="btn small">Title Z → A</button>
+</div>
+
+
+<div class="control-row">
+<label for="filter">Filter by Category:</label>
+<select id="filter">
+<option value="All">All</option>
+<option value="Fiction">Fiction</option>
+<option value="Comedy">Comedy</option>
+<option value="Technical">Technical</option>
+</select>
+</div>
+</div>
+</section>
+
+
+<section class="card display-card">
+<h3>Books</h3>
+<div id="booksGrid" class="grid"></div>
+<p id="emptyMsg" class="muted">No books yet. Add one using the form.</p>
+</section>
+</main>
+
+
+<script src="app.js"></script>
+</body>
+</html>
